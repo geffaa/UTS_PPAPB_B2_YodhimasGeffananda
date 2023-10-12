@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="930dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/green1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/calorie" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:text="Isi data dibawah ini dengan benar!"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:text="Nama Pengguna"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/primary"
+                            android:fontFamily="@font/dm_sans"
+                            android:hint="Masukan nama lengkap"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:id="@+id/BB_Sekarang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Berat Badan Sekarang"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spinner_satuan_berat_1"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/BB_Sekarang"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="255dp"
+                                android:background="@drawable/spinner_background"
+                                android:spinnerMode="dropdown" />
+
+                            <EditText
+                                android:id="@+id/edt_berat_sekarang"
+                                android:layout_width="225dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_below="@id/BB_Sekarang"
+                                android:background="@drawable/spinner_background">
+                            </EditText>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/BB_Sekarang"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="14dp"
+                                android:src="@drawable/baseline_arrow_drop_down_24" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:id="@+id/BB_Impian"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Berat Badan Impian"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spinner_satuan_berat_2"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/BB_Impian"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="255dp"
+                                android:background="@drawable/spinner_background"
+                                android:spinnerMode="dropdown" />
+
+                            <EditText
+                                android:layout_width="225dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/edt_berat_tujuan"
+                                android:layout_below="@id/BB_Impian"
+                                android:background="@drawable/spinner_background">
+                            </EditText>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/BB_Impian"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="14dp"
+                                android:src="@drawable/baseline_arrow_drop_down_24" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/Tujuan_Diet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:text="Tujuan Diet"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_goals"
+                            android:layout_width="330dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/Tujuan_Diet"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/spinner_background"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Tujuan_Diet"
+                            android:layout_marginLeft="325dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="14dp"
+                            android:src="@drawable/baseline_arrow_drop_down_24" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Tanggal Target"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <DatePicker
+                                android:id="@+id/date_pick"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/spinner_background"
+                                android:calendarViewShown="false"
+                                android:datePickerMode="spinner" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/Kalori_Maksimum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:text="Jumlah maksimum kalori harian"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_satuan_kalori"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/Kalori_Maksimum"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="260dp"
+                            android:background="@drawable/spinner_background"
+                            android:spinnerMode="dropdown" />
+
+                        <EditText
+                            android:layout_width="215dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/edt_kalori"
+                            android:layout_below="@id/Kalori_Maksimum"
+                            android:background="@drawable/spinner_background">
+                        </EditText>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Kalori_Maksimum"
+                            android:layout_marginLeft="325dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="14dp"
+                            android:src="@drawable/baseline_arrow_drop_down_24" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_submit"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/dm_sans_medium"
+                        android:text=" SUBMIT"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:theme="@style/Theme.MaterialComponents"
+                        app:backgroundTint="@color/green1"
+                        app:cornerRadius="15dp"
+                        app:elevation="5dp"
+                        app:rippleColor="@color/green1" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
